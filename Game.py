@@ -5,7 +5,7 @@ import sys
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("D:\SkillBoard\Player.png")
+        self.image = pygame.image.load("Player.png")
         self.rect = self.image.get_rect()
 
         self.rect.x = 100
@@ -18,7 +18,7 @@ class Player(pygame.sprite.Sprite):
 class Platform(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("D:\SkillBoard\walls.png")
+        self.image = pygame.image.load("walls.png")
         self.rect = self.image.get_rect() 
         self.rect.x = x
         self.rect.y = y
@@ -27,7 +27,7 @@ class Platform(pygame.sprite.Sprite):
 class UpperPlatform(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(r'D:\SkillBoard\wall2.png')
+        self.image = pygame.image.load(r'wall2.png')
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -35,7 +35,7 @@ class UpperPlatform(pygame.sprite.Sprite):
 class Coins(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(r'D:\SkillBoard\Coins.png')
+        self.image = pygame.image.load(r'Coins.png')
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -44,7 +44,7 @@ class Coins(pygame.sprite.Sprite):
 class FullHealth(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(r'D:\SkillBoard\heart.png')
+        self.image = pygame.image.load(r'heart.png')
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -52,7 +52,7 @@ class FullHealth(pygame.sprite.Sprite):
 class PowerUp(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(r'D:\SkillBoard\Powerup.png')
+        self.image = pygame.image.load(r'Powerup.png')
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -62,7 +62,7 @@ class PowerUp(pygame.sprite.Sprite):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(r'D:\SkillBoard\enemy.png')
+        self.image = pygame.image.load(r'enemy.png')
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -70,7 +70,7 @@ class Enemy(pygame.sprite.Sprite):
 class MovingPlatform(pygame.sprite.Sprite):
     def __init__(self,x,y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load(r'D:\SkillBoard\movingp.png')
+        self.image = pygame.image.load(r'movingp.png')
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -101,10 +101,10 @@ class MainGame:
         self.distance = 0
         self.dir = 1
         self.health = 3
-        self.health_image = pygame.image.load(r'D:\SkillBoard\heart.png')
-        self.powerup_image = pygame.image.load(r'D:\SkillBoard\poweruplayer.png')
-        self.jumpsound = pygame.mixer.Sound('D:\SkillBoard\JumpMusic.mp3')
-        self.powerupsound = pygame.mixer.Sound('D:\SkillBoard\Powerupsound.mp3')
+        self.health_image = pygame.image.load(r'heart.png')
+        self.powerup_image = pygame.image.load(r'poweruplayer.png')
+        self.jumpsound = pygame.mixer.Sound('JumpMusic.mp3')
+        self.powerupsound = pygame.mixer.Sound('Powerupsound.mp3')
         self.power = False
         self.clock = pygame.time.Clock()
         self.check = 0
@@ -447,7 +447,7 @@ class MainGame:
                     wait = False
 
     def checkhighscore(self):
-        score = open('D:\SkillBoard\highscore.txt','r+')
+        score = open('highscore.txt','r+')
         highscore = score.read()
         highscore_int = int(highscore)
         if self.score > highscore_int:
